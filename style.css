@@ -1,0 +1,406 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9fefb; /* Light green-tinted white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Logo */
+header {
+    background-color: #ffffff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#residua-logo {
+    height: 40px; /* Adjust height as needed */
+    width: auto;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #2a8c4a; /* Main green color */
+}
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center content */
+    width: 100%;
+}
+
+section {
+    margin-bottom: 4rem;
+    padding-top: 4rem; /* Offset for sticky header */
+    margin-top: -4rem; /* Offset for sticky header */
+}
+
+h1, h2 {
+    color: #2a8c4a; /* Main green color */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px solid #d0e8d8; /* Light green underline */
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+     /* Center the heading block */
+    display: block;
+    text-align: center;
+
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #e8f5e9; /* Very light green background */
+    border-radius: 8px;
+    margin-top: 2rem; /* Space below header */
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #4caf50, #2a8c4a);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 25px; /* Pill shape */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Ensure button text doesn't wrap weirdly */
+    white-space: nowrap;
+    text-align: center;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(42, 140, 74, 0.4); /* Greenish shadow */
+}
+
+
+/* Recycling Steps Section */
+.recycling-steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 3rem;
+}
+
+.step {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    flex: 1; /* Distribute space */
+    min-width: 250px; /* Minimum width before wrapping */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.step-icon {
+    font-size: 3rem; /* Adjust icon size */
+    margin-bottom: 1rem;
+    display: inline-block; /* Allow hover effects */
+    transition: transform 0.3s ease;
+}
+
+.step:hover .step-icon {
+    transform: scale(1.1);
+}
+
+
+.step h3 {
+    font-size: 1.3rem;
+    color: #2a8c4a;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    font-size: 0.95rem;
+    color: #555;
+    text-align: center;
+    /* Add some bottom margin if needed */
+    margin-bottom: 0;
+}
+
+/* Shop Section */
+#loja {
+    padding-bottom: 4rem; /* Add some padding at the bottom */
+}
+
+#loja p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    justify-items: center; /* Center items within their grid cells */
+}
+
+.product-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Make card take full width of grid cell */
+    max-width: 320px; /* Optional: Limit max width */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.product-icon {
+    margin-bottom: 1rem;
+    color: #4caf50; /* Use a green shade for icons */
+    background-color: #e8f5e9; /* Light green background for icon */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-icon svg {
+    width: 60%;
+    height: 60%;
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    color: #2a8c4a;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Allow description to push price/button down */
+}
+
+.product-price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-button {
+    /* Inherits .cta-button styles */
+    padding: 0.6rem 1.5rem; /* Slightly smaller padding */
+    font-size: 0.9rem;
+    width: 80%; /* Make button wider */
+    max-width: 200px; /* Limit max width */
+}
+
+/* Contact Section */
+#contato {
+    text-align: center;
+    background-color: #e8f5e9; /* Light green background */
+    padding: 3rem 1rem;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #72e96e;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1.5rem 5%;
+    margin-top: auto; /* Push footer to bottom */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+
+    .logo-container {
+        margin-bottom: 0.5rem;
+    }
+
+    nav ul {
+        margin-top: 0.5rem;
+        justify-content: center;
+        padding-left: 0; /* Remove default padding */
+    }
+
+    nav ul li {
+        margin: 0 0.8rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .recycling-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 80%; /* Make steps take more width */
+        max-width: 400px; /* Limit max width */
+    }
+
+    section {
+         padding-top: 5.5rem; /* Adjust offset for taller header */
+         margin-top: -5.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+     h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+     nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+#pulsating-circle {
+    width: 200px;
+    height: 200px;
+}
+
+#pulsating-circle circle {
+    fill: #ff6b6b;
+    stroke: #c44d4d;
+    stroke-width: 2;
+    transform-origin: center; /* Set transform origin to the center */
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+        fill: #ff8f8f; /* Slightly lighter color */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
