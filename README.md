@@ -1,2 +1,0 @@
-# ResiduAll
-site de reciclagem

@@ -28,9 +28,11 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 });
 
 // Basic alert for "Buy" buttons (replace with actual e-commerce logic later)
+/*
 document.querySelectorAll('.product-button').forEach(button => {
     button.addEventListener('click', () => {
         alert('Redirecionando para a página de compra (funcionalidade a implementar).');
         // In a real application, you would redirect to a checkout page or add to cart.
     });
 });
+*/
